@@ -164,6 +164,7 @@ else:
 """
 
 # loops, for
+
 """
 nombres = ['juan', 'pedro', 'ana']
 
@@ -503,7 +504,7 @@ sorteo = choice(nombres)
 
 # list +
 
-"""from random import *
+from random import *
 
 palabra = 'pyyhon'
 lista = []
@@ -535,7 +536,7 @@ metros = [p * 3.281 for p in pies]
 print(metros)
 
 valores = [1, 2, 3, 4, 5, 6, 9.5]
-valores_cuadrado = [ valor ** 2 for valor in valores]
+valores_cuadrado = [valor ** 2 for valor in valores]
 
 valores = [1, 2, 3, 4, 5, 6, 9.5]
 valores_pares = [n for n in valores if n % 2 == 0]
@@ -543,11 +544,11 @@ valores_pares = [n for n in valores if n % 2 == 0]
 temperatura_fahrenheit = [32, 212, 275]
 grados_celsius = [((n-32)*(5/9)) for n in temperatura_fahrenheit]
 
-"""
+
 
 # match
 
-serie = 'N-02'
+"""serie = 'N-02'
 match serie:
     case 'N-01':
         print('Samsung')
@@ -556,13 +557,21 @@ match serie:
     case 'N-03':
         print('Motorola')
     case _:
-        print('No existe ese producto')
+        print('No existe ese producto')"""
 
-cliente = {'nombre': 'Federico', 'edad':45, 'ocupacion': 'instructor'}
-pelicula = {'titulo': 'Matrix', 'ficha_tecnica': {'protagonista': 'Keanue',
-                                                  'director': 'Lana y Lilly'}
-}
+cliente = {'nombre': 'Federico', 'edad': 45, 'ocupacion': 'instructor'}
+pelicula = {'titulo': 'Matrix', 'ficha_tecnica': {'protagonista': 'Keanue', 'director': 'Lana y Lilly'}}
 
+elementos = [cliente, pelicula, 'libro']
 
-
+for e in elementos:
+    match e:
+        case {'nombre': nombre, 'edad': edad, 'ocupacion': ocupacion}:
+            print('Es un cliente')
+            print(nombre, edad, ocupacion)
+        case {'titulo': titulo, 'ficha_tecnica': {'protagonista': protagonista, 'director': director}}:
+            print('Es una pelicula')
+            print(titulo, protagonista, director)
+        case _:
+            print('No se que es esto')
 
