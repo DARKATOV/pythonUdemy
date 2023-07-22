@@ -1,6 +1,7 @@
 # ------------------------ DAY 4 ------------------------
 
 # comparation
+
 """mi_bool = 10==25
 print(mi_bool)
 
@@ -504,7 +505,7 @@ sorteo = choice(nombres)
 
 # list +
 
-from random import *
+"""from random import *
 
 palabra = 'pyyhon'
 lista = []
@@ -543,6 +544,7 @@ valores_pares = [n for n in valores if n % 2 == 0]
 
 temperatura_fahrenheit = [32, 212, 275]
 grados_celsius = [((n-32)*(5/9)) for n in temperatura_fahrenheit]
+"""
 
 
 
@@ -557,7 +559,7 @@ match serie:
     case 'N-03':
         print('Motorola')
     case _:
-        print('No existe ese producto')"""
+        print('No existe ese producto')
 
 cliente = {'nombre': 'Federico', 'edad': 45, 'ocupacion': 'instructor'}
 pelicula = {'titulo': 'Matrix', 'ficha_tecnica': {'protagonista': 'Keanue', 'director': 'Lana y Lilly'}}
@@ -574,4 +576,4 @@ for e in elementos:
             print(titulo, protagonista, director)
         case _:
             print('No se que es esto')
-
+"""
