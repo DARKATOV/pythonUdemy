@@ -1,5 +1,6 @@
 # ------------------------ DAY 5 ------------------------
 
+
 # functions, methods,
 
 """
@@ -270,47 +271,120 @@ def evaluar_jugada(dado1, dado2):
 lanzo = lanzar_dados()
 print(lanzo)
 evaluar= evaluar_jugada(lanzo[0], lanzo[1])
-"""
+
 
 lista_numeros = [1, 2, 34, 44, 5, 46, 44, 44, 57, 85, 11, 78, 78, 1, 111, 111, 111]
 
 
 def reducir_lista(lista):
-    count = 0
+    lista_nueva = list(set(lista))
     mayor = max(lista)
-    while count == 0:
-        seter = set(lista)
-        if len(seter) == len(lista):
-            count = 0
+    lista_nueva.remove(mayor)
+    return lista_nueva
+
+
+lista_generada = reducir_lista(lista_numeros)
+print(lista_generada)
+
+
+def promedio(lista):
+    count = 0
+    long = len(lista)
+    print(long)
+    for number in lista:
+        count = count + number
+    return count/long
+
+
+promedio_generado = promedio(lista_generada)
+print(promedio_generado)
+
+
+
+import random
+
+
+lista_numeros = [1, 2, 34, 5, 11, 44, 46, 78, 85, 57]
+
+
+def lanzar_moneda():
+    resultado = ['Cara', 'Cruz']
+    hola = random.choice(resultado)
+    return hola
+
+
+pre_select = lanzar_moneda()
+
+def probar_suerte(resultado, lista):
+    if resultado == 'Cara':
+        print('La lista se autodestruirá')
+        lista.clear()
+        return lista
+    else:
+        print('La lista fue salvada')
+        return lista
+
+
+
+total = probar_suerte(pre_select, lista_numeros)
+print(total)
+
+
+
+
+# args , kwargs
+
+def suma(a,b):
+    num = a + b
+    return num
+
+
+
+def sum(*numeros):
+
+    count = 0
+    for elemento in numeros:
+        count = count + elemento
+    return count
+
+
+
+print(sum( 50, 20, 64, 78, 85))
+
+
+def sume(*numbers):
+
+    return sum(numbers)
+
+print(sume(50, 20, 64, 78, 85))
+
+
+"""
+
+
+def suma_cuadrados(*valores):
+    count = 0
+    for valor in valores:
+        count += valor**2
+    return count
+
+
+
+def suma_absolutos(*valores):
+    count = 0
+    for element in valores:
+        if element < 0:
+            converted = element * -1
+            count += converted
         else:
-            count = 1
-    seter.remove(mayor)
-    nueva_lista = []
-    for number in seter:
-        index = 0
-        nueva_lista.append(number[index])
-    return nueva_lista
+            count += element
+    return count
 
 
-reducir = reducir_lista(lista_numeros)
-print(reducir)
-
-def promedio(lista_simplificada):
-    suma = 0
-    for number in list:
-        print(number)
-        suma = suma + number
-
-    promedio
-    return suma/len(lista_simplificada)
-
-
-prome = promedio(reducir)
-print(prome)
-
-
-
-
-
+def numeros_persona(name, *numeros):
+    count = 0
+    for elemento in numeros:
+        count += elemento
+    return f'{name}, la suma de tus números es {count}'
 
 
