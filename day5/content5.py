@@ -330,10 +330,12 @@ total = probar_suerte(pre_select, lista_numeros)
 print(total)
 
 
-
+"""
 
 # args , kwargs
 
+
+"""
 def suma(a,b):
     num = a + b
     return num
@@ -358,8 +360,6 @@ def sume(*numbers):
 
 print(sume(50, 20, 64, 78, 85))
 
-
-"""
 
 
 def suma_cuadrados(*valores):
@@ -386,5 +386,66 @@ def numeros_persona(name, *numeros):
     for elemento in numeros:
         count += elemento
     return f'{name}, la suma de tus números es {count}'
+    
+"""
+
+# kwargs
 
 
+def suma(**kwargs):
+    total = 0
+    for item in kwargs:
+        print(type(kwargs))
+    for clave2, valor in kwargs.items():
+        print(f'{clave2} = {valor}')
+        total += valor
+    return total
+
+
+print(suma(x=3, y=5, z=9))
+
+
+def prueba(num1, num2, *args, **kwargs):
+    print(f'El primer valor es {num1}')
+    print(f'El segundo valor es {num2}')
+
+    total = 0
+
+    for elemento in args:
+        print(f'{elemento}')
+
+    for llave, valor in kwargs.items():
+        print(f'{llave} = {valor}')
+
+
+prueba(15, 2000, 4552, 455, 500, 700, 800,  x=3, y=5, z=9)
+
+
+def cantidad_atributos(**kwargs):
+    total = 0
+    for elemento in kwargs:
+        total += 1
+    return total
+
+
+def lista_atributos(**kwargs):
+    lista = []
+    for elemento in kwargs:
+        lista.append(elemento)
+    return lista
+
+
+def lista_atributos(**kwargs):
+    lista = []
+    for elemento, valor in kwargs.items():
+        lista.append(valor)
+    return lista
+
+
+def describir_persona(name, **kwargs):
+    print(f'Características de: {name}')
+    for caracte, valor in kwargs.items():
+        print(f'{caracte}: {valor}')
+
+
+describir_persona('Antonio', color_ojos='azul', color_pelo='gris')
