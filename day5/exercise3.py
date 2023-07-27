@@ -7,29 +7,17 @@ def negas(*args):
             if number == 0:
                 condition_final = True
             else:
-                pass
+                condition_init = False
         else:
-
-
-
-
-        print(number)
-        if condition_init:
             if number == 0:
-                condition_final = True
+                condition_init = True
             else:
-                pass
-        elif number == 0:
-            condition_init = True
-        else:
-            condition_init = False
-
+                condition_init = False
 
     return condition_final
 
 
-list1 = [1, 2, 5, 78, 0, 45, 45, 22, 0, 25, 0]
-list2 = [1, 2, 5, 78, 0, 45, 45, 22, 0, 25, 0, 0]
+print(negas(1, 2, 5, 78, 0, 45, 45, 22, 0, 25, 0, 5, 0, 5, 0, 0))
+print(negas(1, 2, 5, 78, 0, 45, 45, 22, 0, 25, 5, 0))
+print(negas(1, 2, 5, 78, 0, 0, 45, 45, 22, 0, 25, 5, 0))
 
-print(negas(list1))
-print(negas(list2))

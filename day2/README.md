@@ -15,18 +15,18 @@ print(edad)
 edad1 = 30
 edad2 = 10
 print(edad1+edad2)
-
+```python
 nombre1 = 'Hola'
 nombre2 = 'Mundo'
 frase = nombre1 + ' '+ nombre2
 print(frase)
-
+```
 nombre = input('Tu nombre es: ')
 print(nombre)
-
+```
 nombre = 'Tony Soprano'
 edad = 51
-
+```
 nombre = 'Julia'
 apellido = 'Roberts'
 nombrecompleto = nombre + ' ' + apellido
