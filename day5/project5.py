@@ -6,6 +6,8 @@ r = RandomWords()
 to_word = r.get_random_word()
 list_r = list(to_word)
 to_adivine = len(list_r) - 2
+vidas = 8
+
 
 print('Welcome to hangman game :D. You have 8 tries, good luck')
 print(list_r)
@@ -32,21 +34,27 @@ print(tshow())
 
 
 def enter_letter():
-    lower_check_list = list(string.ascii_lowercase)
+
     condicion = False
+    lower_check_list = list(string.ascii_lowercase)
+
     while not condicion:
         letter = input('Ingresa una letra por favor: ').lower()
-        if len(letter) > 1:
-            print('Solo puedes ingresar una caracter. Intentalo de nuevo')
+        if letter in lower_check_list and len(letter) == 1:
+            condition = True
         else:
-            if letter not in lower_check_list:
-                print('Solo se aceptan caracteres alfabeticos. Intentalo de nuevo')
-            else:
-                condicion = True
+            print('Solo se aceptan caracteres alfabeticos. Intentalo de nuevo')
+
     return letter
 
 
-def verificar_exitencia():
+def nuevo_tablero():
+
+
+
+
+
+
     lista = []
     obtenidos = []
     longitud = len(list_r)
