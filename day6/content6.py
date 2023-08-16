@@ -123,3 +123,40 @@ print(mi_archivo.read())
 
 # pathlib
 
+"""from pathlib import Path, PureWindowsPath
+
+
+carpeta = Path('C:/Users/atope/Documents/') / 'hola.txt'
+print(carpeta.read_text())
+print(carpeta.name)
+print(carpeta.suffix)
+print(carpeta.stem)
+
+
+if not carpeta.exists():
+    print('Este archivo no existe')
+else:
+    print('Genial')
+
+
+ruta_windows = PureWindowsPath(carpeta)
+print(ruta_windows)
+
+
+carpeta = Path('C:/Users/atope/Documents/') / 'holah.txt'
+
+if not carpeta.exists():
+    print('Este archivo no existe')
+else:
+    print('Genial')
+"""
+
+# path
+
+from pathlib import Path
+
+base = Path.home()
+guia = Path(base, 'Barcelona', 'Sagrada_familia.txt')
+print(guia)
+
+
